@@ -26,10 +26,6 @@ WORKDIR /app
 
 COPY --from=builder /app/target/release/mke_trash /usr/local/bin/app
 
-ENV ADDRESS="200 E Wells St, Milwaukee, WI 53202"
-ENV LAT="43.0417"
-ENV LNG="-87.9098"
-
 EXPOSE 8577
 
 CMD ["app"]

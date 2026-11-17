@@ -1,0 +1,13 @@
+services:
+  mke-trash:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mke_trash
+    restart: unless-stopped
+    ports:
+      - "8577:8577"
+    environment:
+      - ADDRESS=200 E Wells St, Milwaukee, WI 53202
+      - LAT=43.0416
+      - LNG=-87.9098
